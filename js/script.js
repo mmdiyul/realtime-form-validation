@@ -1,4 +1,4 @@
-function nameValidation(){
+let nameValidation = () => {
     let nama = document.getElementById('nama').value
     if (nama == '') {
         document.getElementById('helpNama').setAttribute('class', 'fa fa-times text-danger')
@@ -9,7 +9,7 @@ function nameValidation(){
     }
 }
 
-function usernameValidation() {
+let usernameValidation = () => {
     let username = document.getElementById('username').value
     if (username.length < 5) {
         document.getElementById('helpUsername').setAttribute('class', 'fa fa-times text-danger')
@@ -20,7 +20,7 @@ function usernameValidation() {
     }
 }
 
-function emailValidation() {
+let emailValidation = () => {
     let email = document.getElementById('email').value
     // regex for if-else condition from https://stackoverflow.com/a/4964763
     if(/(.+)@(.+){2,}\.(.+){2,}/.test(email)) {
@@ -32,7 +32,7 @@ function emailValidation() {
     }
 }
 
-function passwordValidation() {
+let passwordValidation = () => {
     let password = document.getElementById('password').value
     if (password.length < 8) {
         document.getElementById('helpPassword').setAttribute('class', 'fa fa-times text-danger')
@@ -43,7 +43,7 @@ function passwordValidation() {
     }
 }
 
-function passwordConfirm() {
+let passwordConfirm = () => {
     let password = document.getElementById('password').value
     let passwordConfirm = document.getElementById('passwordConfirmation').value
     if (passwordConfirm == "" || passwordConfirm == password && passwordConfirm.length < 8) {       
